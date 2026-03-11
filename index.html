@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solomon David - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header class="header">  
+        <a href="#" class="logo">Solomon.</a>
+        <nav class="navbar">
+            <a href="#Acceuil" class="active">Accueil</a>
+            <a href="#Parcours">Parcours</a>
+            <a href="#Competences">Compétences</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="Acceuil">
+        <div class="container accueil-container">
+            <div class="accueil-content">
+                <h1>DAVID Andriamanompo Solomon</h1>
+                <p>Né le 25 Mars 2007 à Manja, région Menabe, province Toliara; étudiant à l'École de Management et d'Innovation Technologique (EMIT), classe de première année de licence (L1) en Développement d'Application Internet-Intranet (DA2I)</p> 
+                <div class="boutons">
+                    <button class="btn">Hire Me</button>
+                    <button class="btn">Let's Talk</button>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="Acceuil.jpg" alt="Photo de profil Solomon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Parcours -->
+    <section id="Parcours">
+        <div class="container">
+            <h2>Mon Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Octobre 2025</h4>
+                    <p>Admission au concours d'entrée à l'École de Management et d'Innovation Technologique (EMIT) Fianarantsoa</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Août 2025</h4>
+                    <p>Obtention du diplôme baccalauréat série D avec mention PASSABLE</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Juillet 2022</h4>
+                    <p>Obtention du diplôme BEPC enseignement générale</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Août 2018</h4>
+                    <p>Obtention du diplôme CEPE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="Competences">
+        <div class="container">
+            <h2>Mes Compétences</h2>
+            <div class="competences-grid">
+                <!-- Bureautique -->
+                <div class="competence-categorie">
+                    <h3><i class="fas fa-laptop" style="margin-right: 10px;"></i>Bureautique</h3>
+                    <div class="competence-item">
+                        <p>Word</p>
+                        <div class="skill-bar">
+                            <div class="skill-level word"></div>
+                        </div>
+                    </div>
+                    <div class="competence-item">
+                        <p>Excel</p>
+                        <div class="skill-bar">
+                            <div class="skill-level excel"></div>
+                        </div>
+                    </div>
+                    <div class="competence-item">
+                        <p>PowerPoint</p>
+                        <div class="skill-bar">
+                            <div class="skill-level powerpoint"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Langages de programmation -->
+                <div class="competence-categorie">
+                    <h3><i class="fas fa-code" style="margin-right: 10px;"></i>Langages</h3>
+                    <div class="competence-item">
+                        <p>HTML</p>
+                        <div class="skill-bar">
+                            <div class="skill-level html"></div>
+                        </div>
+                    </div>
+                    <div class="competence-item">
+                        <p>CSS</p>
+                        <div class="skill-bar">
+                            <div class="skill-level css"></div>
+                        </div>
+                    </div>
+                    <div class="competence-item">
+                        <p>JavaScript</p>
+                        <div class="skill-bar">
+                            <div class="skill-level javascript"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Langues -->
+                <div class="competence-categorie">
+                    <h3><i class="fas fa-language" style="margin-right: 10px;"></i>Langues</h3>
+                    <ul class="langues-liste">
+                        <li>Malagasy (Langue maternelle)</li>
+                        <li>Français (Courant)</li>
+                        <li>Anglais (Intermédiaire)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="Contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Téléphone</h4>
+                    <p>032 68 30 665</p>
+                    <p>038 54 82 394</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Adresse</h4>
+                    <p>Soanerana</p>
+                    <p>Fianarantsoa, Madagascar</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>davidandriamanompo</p>
+                    <p>solomon@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Script pour la navigation active
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll pour les liens
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
